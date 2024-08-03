@@ -1,0 +1,20 @@
+mode=click
+threshold=3
+trials=1000
+time_between_inputs=50
+move_distance=127
+start_delay=10
+
+/-------------------------/
+
+Mode can be click or motion
+
+"threshold" is the noise filtering threshold. Note that this is *in addition* to some noise filtering that is present by default.
+
+"trials" must be greater than 100 for the csv to be viewable in MouseTester.
+
+The amount of horizontal distance to move is determined by "move_distance", and can be between -128 and 127. I don't know what the units mean.
+
+"time_between_inputs" is a minimum, the actual average time between inputs will be higher.
+
+"start_delay" is the delay before starting a test in seconds.

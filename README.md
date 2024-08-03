@@ -8,7 +8,7 @@ The device sends either a simulated click or a simulated mouse movement to the P
 
 I personally used an ALS-PT19 for this, but it probably works with other light sensors too (maybe requiring some firmware modifications).
 
-Here is how to build it with an ALS-PT19 breakout board:
+Here is how to build it with an ALS-PT19 breakout board (other light sensors will require different steps):
 
 1. Connect the `out` terminal of the sensor to A1
 2. Connect the positive terminal to VCC

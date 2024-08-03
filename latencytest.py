@@ -39,6 +39,7 @@ with open("settings.txt", "r") as settings:
                 
             case "start_delay":
                 start_delay = int(settings_pair[1])
+                
 searching = True
 while searching == True:
     ports = list(list_ports.comports())

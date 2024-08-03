@@ -37,3 +37,7 @@ Here is how to build it with an ALS-PT19 breakout board (other light sensors wil
 - If playing with VSync off, avoid FPS values exactly equal to your monitor's refresh rate due to phase locking of the tearline.
 
 - Don't move the sensor between tests, because different parts of your monitor will have different latency.
+
+- Use the highest brightness setting available on your monitor
+
+Keep in mind that the device only measures the time it takes for an illuminance transition to start, not to end. So, it won't properly take the response time of a display into account, and should not be used to compare different monitors.

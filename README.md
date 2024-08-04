@@ -8,6 +8,8 @@ The device sends either a simulated click or a simulated mouse movement to the P
 
 I personally used an ALS-PT19 for this, but it probably works with other light sensors too (maybe requiring some firmware modifications).
 
+Ensure you're using a board compatible with the Arduino Mouse library (you should probably use an ATmega32U4 board to be safe).
+
 Here is how to build it with an ALS-PT19 breakout board (other light sensors will require different steps):
 
 1. Connect the `out` terminal of the sensor to A1
@@ -34,10 +36,10 @@ Here is how to build it with an ALS-PT19 breakout board (other light sensors wil
 
 - If you are getting any results in the 0-0.5ms range, try increasing the `time_between_inputs` setting or the `threshold` setting.
 
-- If playing with VSync off, avoid FPS values exactly equal to your monitor's refresh rate due to phase locking of the tearline.
+- If playing with VSync off, avoid FPS values exactly equal to your monitor's refresh rate, since a stationary tearline will mess with the results
 
 - Don't move the sensor between tests, because different parts of your monitor will have different latency.
 
 - Use the highest brightness setting available on your monitor
 
-Keep in mind that the device only measures the time it takes for an illuminance transition to start, not to end. So, it won't properly take the response time of a display into account, and should not be used to compare different monitors.
+Keep in mind that the device only measures the time it takes for an illuminance transition to start, not to end. So, it won't properly take the response time of a display into account, and should not be used to compare different monitors or different settings on the same monitor.
